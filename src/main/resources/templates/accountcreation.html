@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="mobile" lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sample Vendor - Create Account</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+
+<div class="title">
+    <h1>SAMPLE WEB APP</h1>
+</div>
+
+<h3>Please create an account</h3>
+
+<!--Populate a domain account with inputted username and password and vendor client id passed down from previous page-->
+<form class="proceed" action="#" th:action="@{/welcome}" th:object="${domainAccount}" method="post">
+    <p><label><input type="text" placeholder="USERNAME" th:field="*{username}"/></label></p>
+    <p><label><input type="password" placeholder="PASSWORD" th:field="*{password}"/></label></p>
+    <p><label><input type="password" placeholder="CONFIRM PASSWORD"/></label></p>
+    <p><label><input type="hidden" th:value="${domainAccount.id}" id="id" name="id"/></label></p>
+    <p><input class="create_account" type="submit" value="Submit" /></p>
+</form>
+
+<div class="vendorNotes vendorLeft">
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Authorisation code obtained: </strong><span th:text="${authorisationCode.code}"/></li>
+    </ul>
+    <h4 style="text-align: center">Making token() call with parameters:</h4>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>client_id: </strong><span th:text="${client_id}"/></li>
+            <li class="list-group-item"><strong>client_secret: </strong><span th:text="${client_secret}"/></li>
+            <li class="list-group-item"><strong>grant_type: </strong>AUTHORIZATION_CODE</li>
+            <li class="list-group-item"><strong>code: </strong><span th:text="${authorisationCode.code}"/></li>
+        </ul>
+    </div>
+</div>
+
+<div class="vendorNotes vendorRight">
+    <h4 style="text-align: center">token() call response:</h4>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Access token: </strong><span th:text="${vendorAccessTokenInfo.access_token}"/></li>
+            <li class="list-group-item"><strong>Token type: </strong><span th:text="${vendorAccessTokenInfo.token_type}"/></li>
+            <li class="list-group-item"><strong>Refresh token: </strong><span th:text="${vendorAccessTokenInfo.refresh_token}"/></li>
+            <li class="list-group-item"><strong>Token expires in: </strong><span th:text="${vendorAccessTokenInfo.expires_in}"/> seconds</li>
+            <li class="list-group-item"><strong>Vendor client id: </strong><span th:text="${vendorAccessTokenInfo.application_subscription.vendorClientId}"/></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>

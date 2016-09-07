@@ -1,0 +1,163 @@
+@import 'https://fonts.googleapis.com/css?family=Exo';
+
+html {
+    height:100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #fec42d  0%, #fd9726  100%);
+    background: #fec42d; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #fec42d, #fd9726); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top left, #fec42d, #fd9726); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top left, #fec42d, #fd9726); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #fec42d, #fd9726); /* Standard syntax */
+}
+
+.publisher {
+    background: linear-gradient(to bottom, #284C12  0%, #0E4C40  100%);
+    background: #284C12; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #284C12, #0E4C40); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top left, #284C12, #0E4C40); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top left, #284C12, #0E4C40); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #284C12, #0E4C40); /* Standard syntax */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-size: 7em;
+    margin: auto;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    margin: auto;
+    font-size: 3em;
+}
+
+a {
+    color: cornflowerblue;
+}
+
+
+.proceed {
+    text-align: center;
+    margin: 2% auto auto;
+}
+
+.response {
+    font-family: "Arial", sans-serif;
+    padding: 5px;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.landing-wrapper {
+    margin-top: 4%;
+    text-align: center;
+}
+
+.landing, .create_account {
+    text-align: center;
+    font-size: 2.5em;
+    background-color: darkgrey;
+    font-family: 'Exo', sans-serif;
+    cursor: pointer;
+    color: white;
+}
+
+.landing:hover, .create_account:hover {
+    background-color: #fd9726;
+}
+
+.create_account {
+    font-size: 1.5em;
+
+}
+
+
+.oddsTableWrapper {
+    font-family: "Courier New", serif;
+    width: 50%;
+    margin: auto;
+}
+
+#oddsTable, td {
+    border: 1px solid black;
+    table-layout: fixed;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: none;
+    border-left: none;
+}
+
+td {
+    background-color: white;
+}
+
+#bf-logo, #pp-logo, #ld-logo {
+    width: 100%;
+}
+
+#bf, #pp, #lad {
+    width: 20%;
+}
+
+#bf, .bl {
+    background-color: #FFB80C;
+}
+#pp {
+    background-color: #0E4C40;
+}
+
+
+.oddsRow {
+    height: 40px;
+}
+
+.back {
+    background-color: #94C6ED;
+}
+.lay {
+    background-color: pink;
+}
+.back:hover, .lay:hover {
+    background-color: #fec42d;
+    color: rgba(0,0,0,100);
+}
+.infoColumn {
+    width: 20%;
+}
+
+#blank {
+    background-color: transparent;
+    border-left: none;
+    border-top: transparent;
+}
+
+.vendorNotes {
+    width: 40%;
+    padding: 5px;
+    background-color: ghostwhite;
+    color: black;
+    border: 4px solid #b81100;
+    clear: both;
+}
+
+.vendorLeft {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.vendorRight {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
