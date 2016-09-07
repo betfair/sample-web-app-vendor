@@ -1,5 +1,8 @@
 package com.betfair.vendor.domain;
 
+/**
+ * Token Types
+ */
 public enum TokenType {
 
     BEARER("BEARER"),
@@ -14,5 +17,4 @@ public enum TokenType {
     public String getMessage() {
         return message;
     }
-
 }

@@ -1,13 +1,13 @@
 package com.betfair.vendor.domain;
 
 /**
- * Created by MezeretN on 29/07/2016.
+ * A container for Account Funds details returned from the getAccountFunds operation
  */
 public class AccountFundsContainer {
 
     private String id;
-
     private AccountFunds result;
+    private AccountApiError error;
 
     public AccountFunds getResult() {
         return result;
@@ -25,12 +25,20 @@ public class AccountFundsContainer {
         this.id = id;
     }
 
+    public AccountApiError getError() {
+        return error;
+    }
+
+    public void setError(AccountApiError error) {
+        this.error = error;
+    }
+
     @Override
     public String toString() {
         return "AccountFundsContainer{" +
                 ", id='" + id + '\'' +
                 ", result=" + result +
+                ", error=" + error +
                 '}';
     }
 }
-

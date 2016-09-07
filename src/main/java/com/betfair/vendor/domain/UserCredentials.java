@@ -1,6 +1,8 @@
 package com.betfair.vendor.domain;
 
-
+/**
+ * Credentials for a user
+ */
 public class UserCredentials {
 
     private String password;
@@ -21,5 +23,4 @@ public class UserCredentials {
     public void setUsername(String username) {
         this.username = username;
     }
-
 }

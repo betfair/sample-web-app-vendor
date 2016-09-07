@@ -1,7 +1,7 @@
 package com.betfair.vendor.domain;
 
 /**
- * Created by MezeretN on 29/07/2016.
+ * Details of an Account
  */
 public class DomainAccount {
 

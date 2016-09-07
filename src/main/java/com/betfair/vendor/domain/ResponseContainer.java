@@ -1,20 +1,16 @@
 package com.betfair.vendor.domain;
 
-
+/**
+ * Container for a Json RPC response
+ */
 public abstract class ResponseContainer {
 
-    private Error error;
     private String jsonrpc;
 
-    public Error getError() {
-        return error;
-    }
-    public void setError(Error error) {
-        this.error = error;
-    }
     public String getJsonrpc() {
         return jsonrpc;
     }
+
     public void setJsonrpc(String jsonrpc) {
         this.jsonrpc = jsonrpc;
     }
@@ -22,7 +18,6 @@ public abstract class ResponseContainer {
     @Override
     public String toString() {
         return "ResponseContainer{" +
-                "error=" + error +
                 ", jsonrpc='" + jsonrpc + '\'' +
                 '}';
     }

@@ -2,6 +2,9 @@ package com.betfair.vendor.domain;
 
 import java.util.Date;
 
+/**
+ * Application Subscription details returned from the token operation
+ */
 public class ApplicationSubscription {
 
     private String subscriptionToken;

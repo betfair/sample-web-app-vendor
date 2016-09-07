@@ -1,9 +1,10 @@
 package com.betfair.vendor.domain;
 
 /**
- * Created by MezeretN on 29/07/2016.
+ * Account Funds details returned from the getAccountFunds operation
  */
 public class AccountFunds {
+
     private String availableToBetBalance;
     private double exposure;
     private double retainedCommission;

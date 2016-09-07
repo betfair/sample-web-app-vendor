@@ -1,9 +1,10 @@
 package com.betfair.vendor.domain;
 
 /**
- * Created by MezeretN on 01/08/2016.
+ * Details of a response to a Login call
  */
 public class LoginResponse {
+
     private String token;
     private String product;
     private String status;

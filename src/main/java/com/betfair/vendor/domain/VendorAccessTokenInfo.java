@@ -1,5 +1,8 @@
 package com.betfair.vendor.domain;
 
+/**
+ * Vendor Access Token Info details returned from the token operation
+ */
 public class VendorAccessTokenInfo {
 
     private String access_token;
@@ -7,7 +10,6 @@ public class VendorAccessTokenInfo {
     private Long expires_in;
     private String refresh_token;
     private ApplicationSubscription application_subscription;
-
 
     public String getAccess_token() {
         return access_token;
