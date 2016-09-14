@@ -33,34 +33,6 @@
     <p><input class="create_account" type="submit" value="Submit" /></p>
 </form>
 
-<div class="vendorNotes vendorLeft">
-    <ul class="list-group">
-        <li class="list-group-item"><strong>Authorisation code obtained: </strong><span th:text="${authorisationCode.code}"/></li>
-    </ul>
-    <h4 style="text-align: center">Making token() call with parameters:</h4>
-    <div>
-        <ul class="list-group">
-            <li class="list-group-item"><strong>client_id: </strong><span th:text="${client_id}"/></li>
-            <li class="list-group-item"><strong>client_secret: </strong><span th:text="${client_secret}"/></li>
-            <li class="list-group-item"><strong>grant_type: </strong>AUTHORIZATION_CODE</li>
-            <li class="list-group-item"><strong>code: </strong><span th:text="${authorisationCode.code}"/></li>
-        </ul>
-    </div>
-</div>
-
-<div class="vendorNotes vendorRight">
-    <h4 style="text-align: center">token() call response:</h4>
-    <div>
-        <ul class="list-group">
-            <li class="list-group-item"><strong>Access token: </strong><span th:text="${vendorAccessTokenInfo.access_token}"/></li>
-            <li class="list-group-item"><strong>Token type: </strong><span th:text="${vendorAccessTokenInfo.token_type}"/></li>
-            <li class="list-group-item"><strong>Refresh token: </strong><span th:text="${vendorAccessTokenInfo.refresh_token}"/></li>
-            <li class="list-group-item"><strong>Token expires in: </strong><span th:text="${vendorAccessTokenInfo.expires_in}"/> seconds</li>
-            <li class="list-group-item"><strong>Vendor client id: </strong><span th:text="${vendorAccessTokenInfo.application_subscription.vendorClientId}"/></li>
-        </ul>
-    </div>
-</div>
-
 </body>
 
 </html>

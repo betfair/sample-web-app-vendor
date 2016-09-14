@@ -1,16 +1,16 @@
 package com.betfair.vendor.domain;
 
 /**
- * An Authorisation Code
+ * An Authorization Code
  */
-public class AuthorisationCode {
+public class AuthorizationCode {
 
     private String code;
 
-    public AuthorisationCode() {
+    public AuthorizationCode() {
     }
 
-    public AuthorisationCode(String authCode) {
+    public AuthorizationCode(String authCode) {
         this.code = authCode;
     }
 
@@ -24,7 +24,7 @@ public class AuthorisationCode {
 
     @Override
     public String toString() {
-        return "AuthorisationCode{" +
+        return "AuthorizationCode{" +
                 "code='" + code + '\'' +
                 '}';
     }

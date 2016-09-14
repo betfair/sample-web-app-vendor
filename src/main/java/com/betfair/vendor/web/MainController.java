@@ -25,6 +25,8 @@ import static com.betfair.vendor.Helper.*;
  */
 @Controller
 public class MainController implements ErrorController{
+    private static final String AUTHORIZATION_CODE = "AUTHORIZATION_CODE";
+    private static final String REFRESH_TOKEN = "REFRESH_TOKEN";
 
     private Map<String, VendorAccessTokenInfo> sessionInformation = new HashMap<>();
     private List<DomainAccount> activeAccounts = new ArrayList<>();
@@ -59,8 +61,8 @@ public class MainController implements ErrorController{
     public String useAuthCode(@RequestParam String code,
                               @ModelAttribute DomainAccount domainAccount) throws IOException {
 
-        //Exchanging the received authorisation code for the access token
-        VendorAccessTokenInfo vendorAccessTokenInfo = token(code, "AUTHORISATION_CODE", "code");
+        //Exchanging the received authorization code for the access token
+        VendorAccessTokenInfo vendorAccessTokenInfo = token(code, AUTHORIZATION_CODE, "code");
 
         //Storing this information keyed by VendorClientId
         sessionInformation.put(vendorAccessTokenInfo.getApplication_subscription().getVendorClientId(), vendorAccessTokenInfo);
@@ -104,7 +106,7 @@ public class MainController implements ErrorController{
         String refreshToken = sessionInformation.get(id).getRefresh_token();
 
         //Calling token with refresh token grant type to refresh access token
-        VendorAccessTokenInfo vendorAccessTokenInfo = token(refreshToken, "REFRESH_TOKEN", "refresh_token");
+        VendorAccessTokenInfo vendorAccessTokenInfo = token(refreshToken, REFRESH_TOKEN, "refresh_token");
 
         //store new session information
         sessionInformation.put(id, vendorAccessTokenInfo);
@@ -151,8 +153,8 @@ public class MainController implements ErrorController{
                                  @ModelAttribute AccountFunds accountFunds,
                                  Model model) throws IOException {
 
-        //Exchange authorisation code for access token with token() call
-        VendorAccessTokenInfo vendorAccessTokenInfo = token(code, "AUTHORISATION_CODE", "code");
+        //Exchange authorization code for access token with token() call
+        VendorAccessTokenInfo vendorAccessTokenInfo = token(code, AUTHORIZATION_CODE, "code");
 
         //Store information for that vendor client ID
         sessionInformation.put(vendorAccessTokenInfo.getApplication_subscription().getVendorClientId(), vendorAccessTokenInfo);
